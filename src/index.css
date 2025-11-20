@@ -1,0 +1,109 @@
+@import "tailwindcss";
+
+/* ========================================
+   1. CUSTOM THEME (Tailwind Theme Extensions)
+   ======================================== */
+@theme {
+  /* Fonts */
+  --font-playfair: "Playfair Display", serif;
+  --font-lora: "Lora", serif;
+  --font-montserrat: "Montserrat", sans-serif;
+  --font-poppins: "Poppins", sans-serif;
+
+  /* Colors */
+  --color-gold: #c59764;
+  --color-gold-dark: #a57845;
+  --color-gold-darker: #8c6239;
+  --color-midnight: #120d12;
+}
+
+/* ========================================
+   2. BASE LAYER – Global Element Styles
+   ======================================== */
+@layer base {
+  /* Scroll offset for anchor links (fixed header) */
+  [id] {
+    scroll-margin-top: 80px; /* h-20 */
+  }
+
+  /* md ve üstü: header 104px (h-26) */
+  @media (min-width: 768px) {
+    [id] {
+      scroll-margin-top: 104px; /* h-26 */
+    }
+  }
+
+  body {
+    @apply font-montserrat;
+  }
+
+  h1,
+  h3 {
+    @apply font-playfair; /* Başlıklara da scroll offset */
+  }
+
+  /* Smooth scrolling (isteğe bağlı ama çok hoş durur) */
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* ========================================
+   3. COMPONENTS LAYER – Reusable Classes
+   ======================================== */
+@layer components {
+  /* Ana container */
+  .customContainer {
+    @apply max-w-7xl mx-auto xl:px-0 px-8;
+  }
+
+  /* Filter-aware sticky (örneğin kategori filtresi altında yapışkan elementler) */
+  .filter-aware-sticky {
+    top: calc(var(--filter-height, 88px) + 1rem) !important;
+  }
+
+  /* Custom Loader */
+  .loader {
+    @apply w-24 h-24 border-4 border-white border-b-transparent rounded-full mx-auto box-border;
+    animation: rotation 1s linear infinite;
+  }
+}
+
+/* ========================================
+   4. UTILITIES & CUSTOM SCROLLBAR
+   ======================================== */
+
+/* Custom Scrollbar – Webkit (Chrome, Safari, Edge) */
+.scrollbar-custom {
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: rgba(215, 170, 90, 0.4) transparent;
+}
+
+.scrollbar-custom::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.scrollbar-custom::-webkit-scrollbar-track {
+  @apply bg-transparent rounded-md;
+}
+
+.scrollbar-custom::-webkit-scrollbar-thumb {
+  @apply bg-gold/40 rounded-md transition-all duration-200;
+}
+
+.scrollbar-custom::-webkit-scrollbar-thumb:hover {
+  @apply bg-gold/60;
+}
+
+/* ========================================
+   5. ANIMATIONS
+   ======================================== */
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
