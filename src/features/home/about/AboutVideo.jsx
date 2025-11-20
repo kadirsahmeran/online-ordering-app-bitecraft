@@ -2,7 +2,7 @@ import { PlayCircle } from "lucide-react";
 import Button from "../../../ui/Button";
 import { useState } from "react";
 import VideoModal from "../../../ui/VideoModal";
-// -----------------------------------------------------------------------------
+// ----------------------------------------------------------------------------
 // Component: AboutVideo
 // Description: Creates the video area with a large background image on the About page. // When the user clicks the button, the VideoModal opens.
 // -----------------------------------------------------------------------------
