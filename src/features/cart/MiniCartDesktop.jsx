@@ -15,7 +15,7 @@ export default function MiniCartDesktop({ mode = "desktop" }) {
     <div
       className={`${
         isMobile
-          ? "bg-gray-950 rounded-xl border border-gold-darker/60 text-gray-100 flex flex-col shadow-lg w-full  min-h-[500px] max-h-full"
+          ? "bg-gray-950 rounded-xl border border-gold-darker/60 text-gray-100 flex flex-col shadow-lg w-full h-full max-h-full"
           : "sticky filter-aware-sticky bg-gray-950 rounded-xl lg:flex hidden lg:w-[30%] border border-gold-darker/60 text-gray-100 min-h-[500px] max-h-[500px] flex-col shadow-lg"
       }`}
     >

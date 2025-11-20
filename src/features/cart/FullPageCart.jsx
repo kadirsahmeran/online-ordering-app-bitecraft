@@ -21,7 +21,7 @@ export default function FullPageCart({ setIsOpen }) {
   return (
     <div className="fixed inset-0 z-50 bg-gray-950 flex flex-col">
       {/* Header with title and close button */}
-      <div className="flex items-center justify-between px-5 py-4 border-b border-gold-darker/40 bg-gray-950/90 backdrop-blur-sm">
+      <div className="flex items-center justify-between px-5 py-8 border-b border-gold-darker/60 bg-gray-950/90 backdrop-blur-sm">
         <h5 className="text-xl font-semibold text-gold">Your Cart</h5>
         <button
           onClick={() => setIsOpen(false)}

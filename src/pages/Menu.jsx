@@ -44,7 +44,7 @@ export default function Menu() {
         selectedCategory={selectedCategory}
       />
 
-      <div className="customContainer mt-4">
+      <div className="customContainer mt-4 lg:pb-0 pb-16">
         <div className="flex lg:flex-row flex-col gap-10">
           <MenuGrid selectedCategory={selectedCategory} />
           <MiniCartDesktop />
