@@ -10,6 +10,7 @@ import useCreateOrder from "./useCreateOrder";
 import CheckMinAmount from "../../ui/CheckMinAmount";
 import toast from "react-hot-toast";
 import Textarea from "../../ui/Textarea";
+import FullPageSpinner from "../../ui/FullPageSpinner";
 
 /**
  * OrderForm component
@@ -95,7 +96,7 @@ export default function OrderForm() {
       return "Address verification failed. Please try again.";
     }
   };
-
+  if (isPending) return <FullPageSpinner />;
   return (
     <Form
       className="lg:w-[65%] w-full"
