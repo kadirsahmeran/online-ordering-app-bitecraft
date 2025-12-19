@@ -37,8 +37,8 @@ Follow the steps below to run this project locally.
 ### Steps
 1.  Clone the repository
     ```bash
-    git clone https://github.com/kadirsahmeran/Bitecraft.git
-    cd Bitecraft
+    git clone https://github.com/kadirsahmeran/online-ordering-app-bitecraft.git
+    cd online-ordering-app-bitecraft
     ```
 2.  Install dependencies:
     ```bash
